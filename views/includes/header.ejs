@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="/css/mobile.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+  <title><%= title %></title>
+</head>
+
+<body>
+  <nav id="main-nav">
+    <div class="container">
+      <a href="/"><img src="../images/logo.png" alt="NewsGrid" class="logo" /></a>
+      <div class="social">
+        <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+      </div>
+      <ul>
+        <li>
+          <a href="/" class="<%= path === '/' ? 'current' : '' %>">Home</a>
+        </li>
+        <li>
+          <a href="/about" class="<%= path === '/about' ? 'current' : '' %>">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,50 @@
+<%-include('includes/header.ejs')%>
+<section id="suggest">
+  <div class="container">
+    <div class="form-wrap">
+      <h1>Suggest Your Brandnew Stuff rigth now!</h1>
+      <form action="/suggest" method="POST">
+        <div>
+          <label for="email">Your Email (to contact you back)</label>
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </div>
+        <div>
+          <label for="title">News Title</label>
+          <input type="text" name="title" id="title" placeholder="Title" />
+        </div>
+        <div>
+          <label for="type">Type Of News</label>
+          <select name="type" id="type">
+            <option value="Entertainment">Entertainment</option>
+            <option value="Sports">Sports</option>
+            <option value="Technology">Technology</option>
+          </select>
+        </div>
+        <div>
+          <label for="content">Content</label>
+          <textarea name="content" id="content"></textarea>
+        </div>
+        <div>
+          <label for="provider">Source URL (to verify data)</label>
+          <input
+            type="text"
+            name="provider"
+            id="provider"
+            placeholder="Source URL"
+          />
+        </div>
+        <div>
+          <label for="imageUrl">Image URL</label>
+          <input
+            type="text"
+            name="imageUrl"
+            id="imageUrl"
+            placeholder="Image URL"
+          />
+        </div>
+        <button type="submit" class="btn bnt-block btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<%-include('includes/footer.ejs')%>

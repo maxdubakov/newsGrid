@@ -1,0 +1,41 @@
+<%-include('includes/header.ejs')%>
+<section id="article">
+  <div class="container">
+    <div class="page-container">
+      <article class="card">
+        <img src="<%=post.imageUrl%>" alt="Post">
+        <h1 class="l-heading"><%=post.title%></h1>
+        <div class="meta">
+          <small>
+            <i class="fas fa-user"></i> Written by Max Dubakov | January 12, 2020
+          </small>
+          <div class="category category-<%=post.type%>"><%=post.type%></div>
+        </div>
+        <%=post.content%>
+      </article>
+      <aside id="categories " class="card">
+        <h2>Categories</h2>
+        <ul class="list">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Sports</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Entertainment</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Technology</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Fashion</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Shopping</a></li>
+        </ul>
+
+      </aside>
+
+      <aside class="card bg-secondary">
+        <h2>Join Our Club</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, dolores!</p>
+        <a href="#" class="btn btn-dark btn-block">Join Now</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<%-include('includes/footer.ejs') %>
+</body>
+
+</html>

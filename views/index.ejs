@@ -1,0 +1,137 @@
+<%-include('includes/header.ejs')%>
+<!-- Showcase -->
+<header id="showcase">
+  <div class="container">
+    <div class="showcase-container">
+      <div class="showcase-content">
+        <div class="category category-Sports">Sports</div>
+        <h1>Pep gave Baggio's captain's armband</h1>
+        <p>
+          In Brescia, Pep gave Baggio's captain's armband directly to the field. He admired the Italian.
+          We recently recalled how, in the 1999/00 season, Barcelona captain Pep Guardiola and his team
+          went against the Spanish Football Federation. Having played at Barca for another season, the
+          Catalan announced his resignation from the club. Pep turned 30, he was tormented by injuries, but ...
+        </p>
+        <a href="../views/article.ejs" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Home articles -->
+
+<% if (size > 6) { %>
+<section id="home-articles" class="py-2">
+  <div class="container">
+    <h2>Editors Picks</h2>
+    <% for (let i = 0; i < Math.floor(size/7); i+=7) { %>
+    <div class="articles-container">
+      <article class="card">
+        <a href="/posts/<%=posts[i]._id%>"><img src="<%=posts[i].imageUrl%>" alt="<%=posts[i].title%>" /></a>
+        <div>
+          <div class="category category-<%=posts[i].type%>"><%=posts[i].type%></div>
+          <h3>
+            <a href="/posts/<%=posts[i]._id%>"><%=posts[i].title%></a>
+          </h3>
+          <p>
+            <%=posts[i].content.split('.')[0]%>.
+            <%=posts[i].content.split('.')[1]%>.
+          </p>
+        </div>
+      </article>
+      <article class="card bg-dark">
+        <div class="category category-<%=posts[i+1].type%>"><%=posts[i+1].type%></div>
+        <h3>
+          <a href="/posts/<%=posts[i+1]._id%>"><%=posts[i+1].title%></a>
+        </h3>
+        <p>
+          <%=posts[i+1].content.split('.')[0]%>.
+          <%=posts[i+1].content.split('.')[1]%>.
+        </p>
+      </article>
+      <article class="card">
+        <img src="<%=posts[i].imageUrl%>" alt="" />
+        <div class="category category-<%=posts[i+2].type%>"><%=posts[i+2].type%></div>
+        <h3>
+          <a href="/posts/<%=posts[i+2]._id%>"><%=posts[i+2].title%></a>
+        </h3>
+        <p>
+          <%=posts[i+2].content.split('.')[0]%>.
+          <%=posts[i+2].content.split('.')[1]%>.
+        </p>
+      </article>
+      <article class="card">
+        <div class="category category-<%=posts[i+3].type%>"><%=posts[i+3].type%></div>
+        <h3>
+          <a href="/posts/<%=posts[i+3]._id%>"><%=posts[i+3].title%></a>
+        </h3>
+        <p>
+          <%=posts[i+3].content.split('.')[0]%>.
+          <%=posts[i+3].content.split('.')[1]%>.
+        </p>
+        <img src="<%=posts[i+3].imageUrl%>" alt="" />
+      </article>
+      <article class="card">
+        <img src="<%=posts[i+4].imageUrl%>" alt="" />
+        <div class="category category-<%=posts[i+4].type%>"><%=posts[i+4].type%></div>
+        <h3>
+          <a href="/posts/<%=posts[i+4]._id%>"><%=posts[i+4].title%></a>
+        </h3>
+        <p>
+          <%=posts[i+4].content.split('.')[0]%>.
+          <%=posts[i+4].content.split('.')[1]%>.
+        </p>
+      </article>
+      <article class="card bg-primary">
+        <div class="category category-<%=posts[i+5].type%>"><%=posts[i+5].type%></div>
+        <h3>
+          <a href="/posts/<%=posts[i+5]._id%>"><%=posts[i+5].title%></a>
+        </h3>
+        <p>
+          <%=posts[i+5].content.split('.')[0]%>.
+          <%=posts[i+5].content.split('.')[1]%>.
+        </p>
+      </article>
+      <article class="card">
+        <div>
+          <div class="category category-<%=posts[i+6].type%>"><%=posts[i+6].type%></div>
+          <h3>
+            <a href="/posts/<%=posts[i+6]._id%>"><%=posts[i+6].title%></a>
+          </h3>
+          <p>
+            <%=posts[i+6].content.split('.')[0]%>.
+            <%=posts[i+6].content.split('.')[1]%>.
+          </p>
+        </div>
+        <img src="<%=posts[i+6].imageUrl%>" alt="Article 1" />
+      </article>
+    </div>
+    <% } %>
+  </div>
+</section>
+<% }%>
+
+<% if (size%7 !== 0)  { %>
+<section id="home-articles" class="py-2">
+  <div class="container">
+    <div class="articles-container-additional">
+      <% for (let i = size - size%7; i < size; i++) { %>
+      <article class="card bg-dark">
+        <div class="category category-<%=posts[i].type%>"><%=posts[i].type%></div>
+        <h3>
+          <a href="/posts/<%posts[i]._id%>"><%=posts[i].title%></a>
+        </h3>
+        <p>
+          <%=posts[i].content.split('.')[0]%>.
+          <%=posts[i].content.split('.')[1]%>.
+        </p>
+      </article>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
+<!-- Footer -->
+<%-include('includes/footer.ejs') %>
+</body>
+
+</html>
