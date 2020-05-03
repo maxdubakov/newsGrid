@@ -28,81 +28,100 @@
       <article class="card">
         <a href="/posts/<%=posts[i]._id%>"><img src="<%=posts[i].imageUrl%>" alt="<%=posts[i].title%>" /></a>
         <div>
-          <div class="category category-<%=posts[i].type%>"><%=posts[i].type%></div>
-          <h3>
-            <a href="/posts/<%=posts[i]._id%>"><%=posts[i].title%></a>
-          </h3>
-          <p>
-            <%=posts[i].content.split('.')[0]%>.
-            <%=posts[i].content.split('.')[1]%>.
-          </p>
+          <a href="/posts/<%=posts[i]._id%>">
+            <div class="category category-<%=posts[i].type%>"><%=posts[i].type%></div>
+            <h3>
+              <%=posts[i].title%>
+            </h3>
+            <p>
+              <%=posts[i].content.split('.')[0]%>.
+              <%=posts[i].content.split('.')[1]%>.
+            </p>
+          </a>
         </div>
       </article>
       <article class="card bg-dark">
-        <div class="category category-<%=posts[i+1].type%>"><%=posts[i+1].type%></div>
-        <h3>
-          <a href="/posts/<%=posts[i+1]._id%>"><%=posts[i+1].title%></a>
-        </h3>
-        <p>
-          <%=posts[i+1].content.split('.')[0]%>.
-          <%=posts[i+1].content.split('.')[1]%>.
-        </p>
+        <a href="/posts/<%=posts[i+1]._id%>">
+          <div class="category category-<%=posts[i+1].type%>"><%=posts[i+1].type%></div>
+          <h3>
+            <%=posts[i+1].title%>
+          </h3>
+
+          <p>
+            <%=posts[i+1].content.split('.')[0]%>.
+            <%=posts[i+1].content.split('.')[1]%>.
+          </p>
+        </a>
       </article>
       <article class="card">
-        <img src="<%=posts[i].imageUrl%>" alt="" />
-        <div class="category category-<%=posts[i+2].type%>"><%=posts[i+2].type%></div>
-        <h3>
-          <a href="/posts/<%=posts[i+2]._id%>"><%=posts[i+2].title%></a>
-        </h3>
-        <p>
-          <%=posts[i+2].content.split('.')[0]%>.
-          <%=posts[i+2].content.split('.')[1]%>.
-        </p>
+        <a href="/posts/<%=posts[i+2]._id%>"><img src="<%=posts[i].imageUrl%>" alt="" /></a>
+        <div>
+          <a href="/posts/<%=posts[i+2]._id%>">
+            <div class="category category-<%=posts[i+2].type%>"><%=posts[i+2].type%></div>
+            <h3>
+              <%=posts[i+2].title%>
+            </h3>
+            <p>
+              <%=posts[i+2].content.split('.')[0]%>.
+              <%=posts[i+2].content.split('.')[1]%>.
+            </p>
+          </a>
+        </div>
       </article>
       <article class="card">
-        <div class="category category-<%=posts[i+3].type%>"><%=posts[i+3].type%></div>
-        <h3>
-          <a href="/posts/<%=posts[i+3]._id%>"><%=posts[i+3].title%></a>
-        </h3>
-        <p>
-          <%=posts[i+3].content.split('.')[0]%>.
-          <%=posts[i+3].content.split('.')[1]%>.
-        </p>
-        <img src="<%=posts[i+3].imageUrl%>" alt="" />
+        <a href="/posts/<%=posts[i+3]._id%>">
+          <div class="category category-<%=posts[i+3].type%>"><%=posts[i+3].type%></div>
+          <h3>
+            <%=posts[i+3].title%>
+          </h3>
+          <p>
+            <%=posts[i+3].content.split('.')[0]%>.
+            <%=posts[i+3].content.split('.')[1]%>.
+          </p>
+        </a>
+        <a href="/posts/<%=posts[i+3]._id%>"><img src="<%=posts[i+3].imageUrl%>" alt="" /></a>
       </article>
       <article class="card">
-        <img src="<%=posts[i+4].imageUrl%>" alt="" />
-        <div class="category category-<%=posts[i+4].type%>"><%=posts[i+4].type%></div>
-        <h3>
-          <a href="/posts/<%=posts[i+4]._id%>"><%=posts[i+4].title%></a>
-        </h3>
-        <p>
-          <%=posts[i+4].content.split('.')[0]%>.
-          <%=posts[i+4].content.split('.')[1]%>.
-        </p>
+        <a href="/posts/<%=posts[i+4]._id%>">
+          <img src="<%=posts[i+4].imageUrl%>" alt="" /></a>
+        <a href="/posts/<%=posts[i+4]._id%>">
+          <div class="category category-<%=posts[i+4].type%>"><%=posts[i+4].type%></div>
+          <h3>
+            <%=posts[i+4].title%>
+          </h3>
+          <p>
+            <%=posts[i+4].content.split('.')[0]%>.
+            <%=posts[i+4].content.split('.')[1]%>.
+          </p>
+        </a>
       </article>
       <article class="card bg-primary">
-        <div class="category category-<%=posts[i+5].type%>"><%=posts[i+5].type%></div>
-        <h3>
-          <a href="/posts/<%=posts[i+5]._id%>"><%=posts[i+5].title%></a>
-        </h3>
-        <p>
-          <%=posts[i+5].content.split('.')[0]%>.
-          <%=posts[i+5].content.split('.')[1]%>.
-        </p>
+        <a href="/posts/<%=posts[i+5]._id%>">
+          <div class="category category-<%=posts[i+5].type%>"><%=posts[i+5].type%></div>
+          <h3>
+            <%=posts[i+5].title%>
+          </h3>
+          <p>
+            <%=posts[i+5].content.split('.')[0]%>.
+            <%=posts[i+5].content.split('.')[1]%>.
+          </p>
+        </a>
       </article>
       <article class="card">
         <div>
-          <div class="category category-<%=posts[i+6].type%>"><%=posts[i+6].type%></div>
-          <h3>
-            <a href="/posts/<%=posts[i+6]._id%>"><%=posts[i+6].title%></a>
-          </h3>
-          <p>
-            <%=posts[i+6].content.split('.')[0]%>.
-            <%=posts[i+6].content.split('.')[1]%>.
-          </p>
+          <a href="/posts/<%=posts[i+6]._id%>">
+            <div class="category category-<%=posts[i+6].type%>"><%=posts[i+6].type%></div>
+            <h3>
+              <%=posts[i+6].title%>
+            </h3>
+            <p>
+              <%=posts[i+6].content.split('.')[0]%>.
+              <%=posts[i+6].content.split('.')[1]%>.
+            </p>
+          </a>
         </div>
-        <img src="<%=posts[i+6].imageUrl%>" alt="Article 1" />
+        <a href="/posts/<%=posts[i+6]._id%>">
+          <img src="/<%=posts[i+6].imageUrl%>" alt="Article 1" /></a>
       </article>
     </div>
     <% } %>
@@ -116,14 +135,16 @@
     <div class="articles-container-additional">
       <% for (let i = size - size%7; i < size; i++) { %>
       <article class="card bg-dark">
-        <div class="category category-<%=posts[i].type%>"><%=posts[i].type%></div>
-        <h3>
-          <a href="/posts/<%posts[i]._id%>"><%=posts[i].title%></a>
-        </h3>
-        <p>
-          <%=posts[i].content.split('.')[0]%>.
-          <%=posts[i].content.split('.')[1]%>.
-        </p>
+        <a href="/posts/<%=posts[i]._id%>">
+          <div class="category category-<%=posts[i].type%>"><%=posts[i].type%></div>
+          <h3>
+            <%=posts[i].title%>
+          </h3>
+          <p>
+            <%=posts[i].content.split('.')[0]%>.
+            <%=posts[i].content.split('.')[1]%>.
+          </p>
+        </a>
       </article>
       <% } %>
     </div>

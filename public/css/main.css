@@ -112,6 +112,25 @@ h6 {
 .card {
   background: #fff;
   padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#home-articles .card p:hover {
+  color: var(--secondary-color);
+}
+
+p::selection {
+  background: var(--secondary-color);
+  color: #fff;
+}
+h3::selection {
+  background: var(--light-color);
+  color: #000;
+}
+
+.card img {
+  height: 250px;
 }
 
 .bg-dark {
@@ -280,14 +299,13 @@ h6 {
 }
 
 #home-articles .articles-container-additional {
-  margin-top: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }
 
 #home-articles .articles-container-additional >*:nth-child(even) {
-  background: var(--primary-color);
+  background: var(--primary-color) !important;
 }
 
 
@@ -301,11 +319,11 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   align-items: center;
-  grid-column: 1 / span 2;
+  grid-column: 2 / span 2;
 }
 
-#home-articles .articles-container > *:last-child {
-  grid-column: 2 / span 2;
+#home-articles .articles-container > *:first-child {
+  grid-column: 1 / span 2;
 }
 
 #article .meta {
@@ -331,7 +349,7 @@ h6 {
   display: inline-block;
   text-align: center;
   margin-right: 0;
-  width: 40%;
+  width: 45%;
 }
 
 #suggest .form-wrap {
@@ -358,6 +376,7 @@ h6 {
   display: block;
   text-align: left;
   margin-bottom: 0.2rem;
+  font-size: 1.1rem;
 }
 
 #suggest .container .form-wrap div input,
@@ -426,4 +445,14 @@ h6 {
 
 #main-footer .footer-container input[type="submit"] {
   width: 100%;
+}
+
+.error {
+  text-align: center;
+  height: 75vh;
+}
+
+.error h1 {
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
 }

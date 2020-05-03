@@ -13,9 +13,7 @@ router.post(
 
     body("title").isLength({ min: 3, max: 30 }),
 
-    body("content").isLength({ min: 5 }),
-
-    body("provider").isLength({ min: 1 }).isURL(),
+    body("content").isLength({ min: 5 })
   ],
   suggestController.postSuggest
 );
